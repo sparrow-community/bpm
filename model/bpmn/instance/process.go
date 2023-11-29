@@ -13,8 +13,8 @@ type Process struct {
 	ProcessType  TProcessType `xml:"processType,attr,omitempty"`
 	IsClosed     bool         `xml:"isClosed,attr,omitempty"`
 	IsExecutable bool         `xml:"isExecutable,attr,omitempty"`
-	Auditing     *Auditing    `xml:"auditing,omitempty"`
-	Monitoring   *Monitoring  `xml:"monitoring,omitempty"`
+	Auditing     Auditing     `xml:"auditing,omitempty"`
+	Monitoring   Monitoring   `xml:"monitoring,omitempty"`
 	Properties   []Property   `xml:"property,omitempty"`
 	LaneSets     []LaneSet    `xml:"laneSet,omitempty"`
 	FlowElements

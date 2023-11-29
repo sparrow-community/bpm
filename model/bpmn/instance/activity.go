@@ -6,10 +6,10 @@ type Activity struct {
 	StartQuantity          int                     `xml:"startQuantity,attr"`
 	CompletionQuantity     int                     `xml:"completionQuantity,attr"`
 	Default                string                  `xml:"default,attr"`
-	IoSpecification        *IoSpecification        `xml:"ioSpecification"`
+	IoSpecification        IoSpecification         `xml:"ioSpecification"`
 	Properties             []Property              `xml:"property"`
 	DataInputAssociations  []DataInputAssociation  `xml:"dataInputAssociation"`
 	DataOutputAssociations []DataOutputAssociation `xml:"dataOutputAssociation"`
 	ResourceRoles          []ResourceRole          `xml:"resourceRole"`
-	LoopCharacteristics    *LoopCharacteristics    `xml:"loopCharacteristics"`
+	LoopCharacteristics    LoopCharacteristics     `xml:"loopCharacteristics"`
 }

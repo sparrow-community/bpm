@@ -2,10 +2,10 @@ package instance
 
 type FlowElement struct {
 	BaseElement
-	Name              string      `xml:"name,attr"`
-	Auditing          *Auditing   `xml:"auditing"`
-	Monitoring        *Monitoring `xml:"monitoring"`
-	CategoryValueRefs []string    `xml:"categoryValueRef"`
+	Name              string     `xml:"name,attr"`
+	Auditing          Auditing   `xml:"auditing"`
+	Monitoring        Monitoring `xml:"monitoring"`
+	CategoryValueRefs []string   `xml:"categoryValueRef"`
 }
 
 type FlowElements struct {
@@ -16,4 +16,6 @@ type FlowElements struct {
 	SequenceFlows       []SequenceFlow       `xml:"sequenceFlow"`
 	DataStoreReferences []DataStoreReference `xml:"dataStoreReference"`
 	ExclusiveGatewaies  []ExclusiveGateway   `xml:"exclusiveGateway"`
+	SubProcess          []SubProcess         `xml:"subProcess"`
+	BoundaryEvents      []BoundaryEvent      `xml:"boundaryEvent"`
 }

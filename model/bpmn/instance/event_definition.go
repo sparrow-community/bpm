@@ -5,5 +5,6 @@ type EventDefinition struct {
 }
 
 type EventDefinitions struct {
-	MessageEventDefinitions []MessageEventDefinition `xml:"messageEventDefinition"`
+	MessageEventDefinitions    []MessageEventDefinition    `xml:"messageEventDefinition"`
+	EscalationEventDefinitions []EscalationEventDefinition `xml:"escalationEventDefinition"`
 }

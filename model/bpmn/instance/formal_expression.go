@@ -5,3 +5,7 @@ type FormalExpression struct {
 	Language           string `xml:"language,attr"`
 	EvaluatesToTypeRef string `xml:"evaluatesToTypeRef,attr"`
 }
+
+func (f *FormalExpression) Type() ExpressionType {
+	return ExpressionTypeFormal
+}
