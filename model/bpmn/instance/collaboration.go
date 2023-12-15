@@ -6,7 +6,7 @@ type Collaboration struct {
 	IsClosed     bool          `xml:"isClosed,attr"`
 	Participants []Participant `xml:"participant"`
 	MessageFlows []MessageFlow `xml:"messageFlow"`
-	Artifacts    []Artifact    `xml:"artifact"`
+	Artifacts
 	ConversationNodes
 	ConversationAssociations []ConversationAssociation `xml:"conversationAssociation"`
 	ParticipantAssociations  []ParticipantAssociation  `xml:"participantAssociation"`

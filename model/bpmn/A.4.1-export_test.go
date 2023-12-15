@@ -8,7 +8,7 @@ import (
 	"github.com/sparrow-community/bpm/model/bpmn/instance"
 )
 
-func TestA_4_1_roundtrip(t *testing.T) {
+func TestA_4_1_export(t *testing.T) {
 	path := "./test/A.4.1-export.bpmn"
 	modelInstance, err := BpmnModelInstanceFromFile(path)
 	if err != nil {

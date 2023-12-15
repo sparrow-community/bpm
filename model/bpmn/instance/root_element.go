@@ -12,4 +12,5 @@ type Rootlemnts struct {
 	Collaborations []Collaboration `xml:"collaboration"`
 	Processes      []Process       `xml:"process"`
 	DataStore      []DataStore     `xml:"dataStore"`
+	Category       []Category      `xml:"category"`
 }

@@ -7,4 +7,6 @@ type EventDefinition struct {
 type EventDefinitions struct {
 	MessageEventDefinitions    []MessageEventDefinition    `xml:"messageEventDefinition"`
 	EscalationEventDefinitions []EscalationEventDefinition `xml:"escalationEventDefinition"`
+	TimerEventDefinitions      []TimerEventDefinition      `xml:"timerEventDefinition"`
+	TerminateEventDefinitions  []TerminateEventDefinition  `xml:"terminateEventDefinition"`
 }
