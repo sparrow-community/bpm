@@ -11,6 +11,8 @@ type RootElement struct {
 type Rootlemnts struct {
 	Collaborations []Collaboration `xml:"collaboration"`
 	Processes      []Process       `xml:"process"`
-	DataStore      []DataStore     `xml:"dataStore"`
-	Category       []Category      `xml:"category"`
+	DataStores     []DataStore     `xml:"dataStore"`
+	Categories     []Category      `xml:"category"`
+	GlobalTasks    []GlobalTask    `xml:"globalTask"`
+	Messages       []Message       `xml:"message"`
 }

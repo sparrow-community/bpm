@@ -929,7 +929,7 @@ func TestB_1_0_export(t *testing.T) {
 						},
 					},
 				},
-				Category: []instance.Category{
+				Categories: []instance.Category{
 					{
 						RootElement: instance.RootElement{
 							BaseElement: instance.BaseElement{
