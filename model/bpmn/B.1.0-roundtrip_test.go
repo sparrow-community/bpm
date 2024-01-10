@@ -27,7 +27,7 @@ func TestB_1_0_roundtrip(t *testing.T) {
 			ID:              "_1373655174418",
 			Name:            "B.1.0",
 			TargetNamespace: "http://www.trisotech.com/definitions/_1373655174418",
-			Rootlemnts: instance.Rootlemnts{
+			RootElemnts: instance.RootElemnts{
 				DataStores: []instance.DataStore{
 					{
 						RootElement: instance.RootElement{
@@ -1071,7 +1071,7 @@ func TestB_1_0_roundtrip(t *testing.T) {
 							},
 						},
 						Artifacts: instance.Artifacts{
-							Group: []instance.Group{
+							Groups: []instance.Group{
 								{
 									Artifact: instance.Artifact{
 										BaseElement: instance.BaseElement{

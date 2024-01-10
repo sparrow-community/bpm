@@ -28,7 +28,7 @@ func TestA_2_0_rountrip(t *testing.T) {
 			TargetNamespace: "http://www.trisotech.com/definitions/_1373649889746",
 			ID:              "_1373649889746",
 			Name:            "A.2.0",
-			Rootlemnts: instance.Rootlemnts{
+			RootElemnts: instance.RootElemnts{
 				Processes: []instance.Process{
 					{
 						CallableElement: instance.CallableElement{

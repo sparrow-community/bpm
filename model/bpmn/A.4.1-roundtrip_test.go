@@ -29,7 +29,7 @@ func TestA_4_1_roundtrip(t *testing.T) {
 			Exporter:        "Signavio Process Editor, http://www.signavio.com",
 			Name:            "A.4.1",
 			ExporterVersion: "7.6.0",
-			Rootlemnts: instance.Rootlemnts{
+			RootElemnts: instance.RootElemnts{
 				Collaborations: []instance.Collaboration{
 					{
 						RootElement: instance.RootElement{

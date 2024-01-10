@@ -11,5 +11,5 @@ type Definitions struct {
 	TypeLanguage       string   `xml:"typeLanguage,attr"`
 	Exporter           string   `xml:"exporter,attr"`
 	ExporterVersion    string   `xml:"exporterVersion,attr"`
-	Rootlemnts
+	RootElemnts
 }

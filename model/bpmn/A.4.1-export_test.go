@@ -28,7 +28,7 @@ func TestA_4_1_export(t *testing.T) {
 			TargetNamespace: "http://bpmn.io/schema/bpmn",
 			Exporter:        "Camunda Modeler",
 			ExporterVersion: "5.4.2",
-			Rootlemnts: instance.Rootlemnts{
+			RootElemnts: instance.RootElemnts{
 				Collaborations: []instance.Collaboration{
 					{
 						RootElement: instance.RootElement{

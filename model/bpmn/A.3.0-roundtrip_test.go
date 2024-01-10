@@ -27,7 +27,7 @@ func TestA_3_0_roudtrip(t *testing.T) {
 			ID:              "_1373649919111",
 			Name:            "A.3.0",
 			TargetNamespace: "http://www.trisotech.com/definitions/_1373649919111",
-			Rootlemnts: instance.Rootlemnts{
+			RootElemnts: instance.RootElemnts{
 				Processes: []instance.Process{
 					{
 						CallableElement: instance.CallableElement{

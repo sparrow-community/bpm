@@ -28,7 +28,7 @@ func TestB_1_0_export(t *testing.T) {
 			TargetNamespace: "http://bpmn.io/schema/bpmn",
 			Exporter:        "Camunda Modeler",
 			ExporterVersion: "5.2.0",
-			Rootlemnts: instance.Rootlemnts{
+			RootElemnts: instance.RootElemnts{
 				Collaborations: []instance.Collaboration{
 					{
 						RootElement: instance.RootElement{
@@ -71,7 +71,7 @@ func TestB_1_0_export(t *testing.T) {
 							},
 						},
 						Artifacts: instance.Artifacts{
-							Group: []instance.Group{
+							Groups: []instance.Group{
 								{
 									Artifact: instance.Artifact{
 										BaseElement: instance.BaseElement{

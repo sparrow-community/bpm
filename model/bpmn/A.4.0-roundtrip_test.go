@@ -27,7 +27,7 @@ func TestA_4_0_roundtrip(t *testing.T) {
 			ID:              "_1373649948794",
 			TargetNamespace: "http://www.trisotech.com/definitions/_1373649948794",
 			Name:            "A.4.0",
-			Rootlemnts: instance.Rootlemnts{
+			RootElemnts: instance.RootElemnts{
 				Collaborations: []instance.Collaboration{
 					{
 						RootElement: instance.RootElement{

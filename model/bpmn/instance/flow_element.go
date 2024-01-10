@@ -9,18 +9,25 @@ type FlowElement struct {
 }
 
 type FlowElements struct {
-	StartEvents         []StartEvent          `xml:"startEvent"`
-	EndEvents           []EndEvent            `xml:"endEvent"`
-	Tasks               []Task                `xml:"task"`
-	UserTasks           []UserTask            `xml:"userTask"`
-	ServiceTasks        []ServiceTask         `xml:"serviceTask"`
-	SequenceFlows       []SequenceFlow        `xml:"sequenceFlow"`
-	DataStoreReferences []DataStoreReference  `xml:"dataStoreReference"`
-	ParallelGatewaies   []ParallelGateway     `xml:"parallelGateway"`
-	ExclusiveGatewaies  []ExclusiveGateway    `xml:"exclusiveGateway"`
-	SubProcess          []SubProcess          `xml:"subProcess"`
-	BoundaryEvents      []BoundaryEvent       `xml:"boundaryEvent"`
-	CallActivities      []CallActivity        `xml:"callActivity"`
-	DataObjectReferenes []DataObjectReference `xml:"dataObjectReference"`
-	DataObjects         []DataObject          `xml:"dataObject"`
+	StartEvents             []StartEvent             `xml:"startEvent"`
+	EndEvents               []EndEvent               `xml:"endEvent"`
+	Tasks                   []Task                   `xml:"task"`
+	UserTasks               []UserTask               `xml:"userTask"`
+	ServiceTasks            []ServiceTask            `xml:"serviceTask"`
+	SendTasks               []SendTask               `xml:"sendTask"`
+	ReceiveTasks            []ReceiveTask            `xml:"receiveTask"`
+	SequenceFlows           []SequenceFlow           `xml:"sequenceFlow"`
+	DataStoreReferences     []DataStoreReference     `xml:"dataStoreReference"`
+	ParallelGatewaies       []ParallelGateway        `xml:"parallelGateway"`
+	ExclusiveGatewaies      []ExclusiveGateway       `xml:"exclusiveGateway"`
+	InclusiveGatewaies      []InclusiveGateway       `xml:"inclusiveGateway"`
+	EventBasedGatewaies     []EventBasedGateway      `xml:"eventBasedGateway"`
+	SubProcess              []SubProcess             `xml:"subProcess"`
+	BoundaryEvents          []BoundaryEvent          `xml:"boundaryEvent"`
+	CallActivities          []CallActivity           `xml:"callActivity"`
+	DataObjectReferenes     []DataObjectReference    `xml:"dataObjectReference"`
+	DataObjects             []DataObject             `xml:"dataObject"`
+	IntermediateThrowEvents []IntermediateThrowEvent `xml:"intermediateThrowEvent"`
+	IntermediateCatchEvents []IntermediateCatchEvent `xml:"intermediateCatchEvent"`
+	ImplicitThrowEvents     []ImplicitThrowEvent     `xml:"implicitThrowEvent"`
 }

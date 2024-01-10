@@ -29,7 +29,7 @@ func TestA_2_1_export(t *testing.T) {
 			TargetNamespace: "http://bpmn.io/schema/bpmn",
 			Exporter:        "Camunda Modeler",
 			ExporterVersion: "5.0.0",
-			Rootlemnts: instance.Rootlemnts{
+			RootElemnts: instance.RootElemnts{
 				Processes: []instance.Process{
 					{
 						CallableElement: instance.CallableElement{

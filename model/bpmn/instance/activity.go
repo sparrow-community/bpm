@@ -11,5 +11,5 @@ type Activity struct {
 	DataInputAssociations  []DataInputAssociation  `xml:"dataInputAssociation"`
 	DataOutputAssociations []DataOutputAssociation `xml:"dataOutputAssociation"`
 	ResourceRoles          []ResourceRole          `xml:"resourceRole"`
-	LoopCharacteristics    LoopCharacteristics     `xml:"loopCharacteristics"`
+	LoopCharacteristicsElements
 }

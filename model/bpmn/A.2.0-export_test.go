@@ -29,7 +29,7 @@ func TestA_2_0_export(t *testing.T) {
 			ID:              "sid-38422fae-e03e-43a3-bef4-bd33b32041b2",
 			Exporter:        "Camunda Modeler",
 			ExporterVersion: "5.0.0",
-			Rootlemnts: instance.Rootlemnts{
+			RootElemnts: instance.RootElemnts{
 				Processes: []instance.Process{
 					{
 						CallableElement: instance.CallableElement{

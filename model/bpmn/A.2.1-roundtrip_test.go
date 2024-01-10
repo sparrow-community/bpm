@@ -31,7 +31,7 @@ func TestA_2_1_roundtrip(t *testing.T) {
 			ExpressionLanguage: "http://groovy.codehaus.org/",
 			Exporter:           "BonitaSoft",
 			ExporterVersion:    "6.3.3",
-			Rootlemnts: instance.Rootlemnts{
+			RootElemnts: instance.RootElemnts{
 				Processes: []instance.Process{
 					{
 						CallableElement: instance.CallableElement{

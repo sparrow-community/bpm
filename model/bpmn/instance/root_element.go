@@ -8,7 +8,7 @@ type RootElement struct {
 	BaseElement
 }
 
-type Rootlemnts struct {
+type RootElemnts struct {
 	Collaborations []Collaboration `xml:"collaboration"`
 	Processes      []Process       `xml:"process"`
 	DataStores     []DataStore     `xml:"dataStore"`
