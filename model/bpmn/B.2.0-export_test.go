@@ -279,7 +279,7 @@ func TestB_2_0_export(t *testing.T) {
 									TargetRef: "Gateway_0y5g78s",
 								},
 							},
-							SubProcess: []instance.SubProcess{
+							SubProcesses: []instance.SubProcess{
 								{
 									Activity: instance.Activity{
 										FlowNode: instance.FlowNode{
@@ -1914,7 +1914,7 @@ func TestB_2_0_export(t *testing.T) {
 									},
 								},
 							},
-							SubProcess: []instance.SubProcess{
+							SubProcesses: []instance.SubProcess{
 								{
 									Activity: instance.Activity{
 										FlowNode: instance.FlowNode{

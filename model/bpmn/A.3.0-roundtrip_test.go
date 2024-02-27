@@ -187,7 +187,7 @@ func TestA_3_0_roudtrip(t *testing.T) {
 									TargetRef: "_10ce0b26-1b3e-46a2-85a5-62538ed2da13",
 								},
 							},
-							SubProcess: []instance.SubProcess{
+							SubProcesses: []instance.SubProcess{
 								{
 									Activity: instance.Activity{
 										FlowNode: instance.FlowNode{

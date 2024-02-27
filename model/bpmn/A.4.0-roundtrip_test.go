@@ -252,7 +252,7 @@ func TestA_4_0_roundtrip(t *testing.T) {
 									},
 								},
 							},
-							SubProcess: []instance.SubProcess{
+							SubProcesses: []instance.SubProcess{
 								{
 									Activity: instance.Activity{
 										FlowNode: instance.FlowNode{

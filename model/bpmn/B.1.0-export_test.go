@@ -484,7 +484,7 @@ func TestB_1_0_export(t *testing.T) {
 									},
 								},
 							},
-							SubProcess: []instance.SubProcess{
+							SubProcesses: []instance.SubProcess{
 								{
 									Activity: instance.Activity{
 										FlowNode: instance.FlowNode{

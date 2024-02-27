@@ -22,7 +22,7 @@ type FlowElements struct {
 	ExclusiveGatewaies      []ExclusiveGateway       `xml:"exclusiveGateway"`
 	InclusiveGatewaies      []InclusiveGateway       `xml:"inclusiveGateway"`
 	EventBasedGatewaies     []EventBasedGateway      `xml:"eventBasedGateway"`
-	SubProcess              []SubProcess             `xml:"subProcess"`
+	SubProcesses            []SubProcess             `xml:"subProcess"`
 	BoundaryEvents          []BoundaryEvent          `xml:"boundaryEvent"`
 	CallActivities          []CallActivity           `xml:"callActivity"`
 	DataObjectReferenes     []DataObjectReference    `xml:"dataObjectReference"`

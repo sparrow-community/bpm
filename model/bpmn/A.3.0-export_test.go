@@ -187,7 +187,7 @@ func TestA_3_0_export(t *testing.T) {
 									TargetRef: "Event_1jn5oqm",
 								},
 							},
-							SubProcess: []instance.SubProcess{
+							SubProcesses: []instance.SubProcess{
 								{
 									Activity: instance.Activity{
 										FlowNode: instance.FlowNode{
