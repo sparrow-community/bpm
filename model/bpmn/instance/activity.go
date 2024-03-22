@@ -11,5 +11,10 @@ type Activity struct {
 	DataInputAssociations  []DataInputAssociation  `xml:"dataInputAssociation"`
 	DataOutputAssociations []DataOutputAssociation `xml:"dataOutputAssociation"`
 	ResourceRoles          []ResourceRole          `xml:"resourceRole"`
+	// substitutionGroup resourceRole
+	Performers []Performer `xml:"performer"`
+	// substitutionGroup performer
+	PotentialOwners []PotentialOwner `xml:"potentialOwner"`
+	HumanPerformers []HumanPerformer `xml:"humanPerformer"`
 	LoopCharacteristicsElements
 }

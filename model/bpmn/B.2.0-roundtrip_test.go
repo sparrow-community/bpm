@@ -100,7 +100,7 @@ func TestB_2_0_roundtrip(t *testing.T) {
 										EventDefinitions: instance.EventDefinitions{
 											ConditionalEventDefinitions: []instance.ConditionalEventDefinition{
 												{
-													Condition: instance.ConditionExpression{
+													Condition: instance.ExpressionUnMarshal{
 														ExpressionSubstitution: &instance.Expression{},
 													},
 												},
@@ -416,7 +416,7 @@ func TestB_2_0_roundtrip(t *testing.T) {
 										EventDefinitions: instance.EventDefinitions{
 											ConditionalEventDefinitions: []instance.ConditionalEventDefinition{
 												{
-													Condition: instance.ConditionExpression{
+													Condition: instance.ExpressionUnMarshal{
 														ExpressionSubstitution: &instance.Expression{},
 													},
 												},
@@ -516,7 +516,10 @@ func TestB_2_0_roundtrip(t *testing.T) {
 										EventDefinitions: instance.EventDefinitions{
 											TimerEventDefinitions: []instance.TimerEventDefinition{
 												{
-													TimeDate: instance.Expression{},
+													TimeDate: instance.ExpressionUnMarshal{
+														Type:                   instance.ExpressionTypeDefault,
+														ExpressionSubstitution: &instance.Expression{},
+													},
 												},
 											},
 										},
@@ -635,7 +638,7 @@ func TestB_2_0_roundtrip(t *testing.T) {
 										EventDefinitions: instance.EventDefinitions{
 											ConditionalEventDefinitions: []instance.ConditionalEventDefinition{
 												{
-													Condition: instance.ConditionExpression{
+													Condition: instance.ExpressionUnMarshal{
 														ExpressionSubstitution: &instance.Expression{},
 													},
 												},
@@ -1413,7 +1416,9 @@ func TestB_2_0_roundtrip(t *testing.T) {
 										},
 										EventDefinitions: instance.EventDefinitions{
 											TimerEventDefinitions: []instance.TimerEventDefinition{
-												{TimeDate: instance.Expression{}},
+												{TimeDate: instance.ExpressionUnMarshal{
+													ExpressionSubstitution: &instance.Expression{},
+												}},
 											},
 										},
 									},
@@ -1457,7 +1462,7 @@ func TestB_2_0_roundtrip(t *testing.T) {
 										EventDefinitions: instance.EventDefinitions{
 											ConditionalEventDefinitions: []instance.ConditionalEventDefinition{
 												{
-													Condition: instance.ConditionExpression{
+													Condition: instance.ExpressionUnMarshal{
 														ExpressionSubstitution: &instance.Expression{},
 													},
 												},
@@ -1525,7 +1530,9 @@ func TestB_2_0_roundtrip(t *testing.T) {
 										},
 										EventDefinitions: instance.EventDefinitions{
 											TimerEventDefinitions: []instance.TimerEventDefinition{
-												{TimeDate: instance.Expression{}},
+												{TimeDate: instance.ExpressionUnMarshal{
+													ExpressionSubstitution: &instance.Expression{},
+												}},
 											},
 										},
 									},
@@ -1896,7 +1903,9 @@ func TestB_2_0_roundtrip(t *testing.T) {
 										},
 										EventDefinitions: instance.EventDefinitions{
 											TimerEventDefinitions: []instance.TimerEventDefinition{
-												{TimeDate: instance.Expression{}},
+												{TimeDate: instance.ExpressionUnMarshal{
+													ExpressionSubstitution: &instance.Expression{},
+												}},
 											},
 										},
 									},

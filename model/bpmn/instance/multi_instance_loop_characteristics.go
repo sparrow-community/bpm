@@ -15,11 +15,11 @@ type MultiInstanceLoopCharacteristics struct {
 	Behavior                   MultiInstanceFlowCondition  `xml:"behavior,attr"`
 	OneBehaviorEventRef        string                      `xml:"oneBehaviorEventRef,attr"`
 	NoneBehaviorEventRef       string                      `xml:"noneBehaviorEventRef,attr"`
-	LoopCardinality            ConditionExpression         `xml:"loopCardinality"`
+	LoopCardinality            ExpressionUnMarshal         `xml:"loopCardinality"`
 	LoopDataInputRef           string                      `xml:"loopDataInputRef,attr"`
 	LoopDataOutputRef          string                      `xml:"loopDataOutputRef,attr"`
 	InputDataItem              DataInput                   `xml:"inputDataItem"`
 	OutputDataItem             DataOutput                  `xml:"outputDataItem"`
 	ComplexBehaviorDefinitions []ComplexBehaviorDefinition `xml:"complexBehaviorDefinition"`
-	CompletionCondition        ConditionExpression         `xml:"completionCondition"`
+	CompletionCondition        ExpressionUnMarshal         `xml:"completionCondition"`
 }

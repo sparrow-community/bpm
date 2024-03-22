@@ -11,9 +11,20 @@ type ExpressionSubstitutionGroup interface {
 	Type() ExpressionType
 }
 
-var ExpressionTypeRegister = map[ExpressionType]ExpressionSubstitutionGroup{
-	ExpressionTypeDefault: &Expression{},
-	ExpressionTypeFormal:  &FormalExpression{},
+var ExpressionTypeRegister = map[ExpressionType]func() ExpressionSubstitutionGroup{
+	ExpressionTypeDefault: func() ExpressionSubstitutionGroup {
+		return &Expression{}
+	},
+	ExpressionTypeFormal: func() ExpressionSubstitutionGroup {
+		return &FormalExpression{}
+	},
+}
+
+func GetExpressionSubstitutionGroup(t ExpressionType) ExpressionSubstitutionGroup {
+	if factory, ok := ExpressionTypeRegister[t]; ok {
+		return factory()
+	}
+	return &Expression{}
 }
 
 type Expression struct {

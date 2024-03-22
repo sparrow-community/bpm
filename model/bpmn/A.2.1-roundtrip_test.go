@@ -204,7 +204,7 @@ func TestA_2_1_roundtrip(t *testing.T) {
 									},
 									SourceRef: "_To9ZtjOCEeSknpIVFCxNIQ",
 									TargetRef: "_To9ZsTOCEeSknpIVFCxNIQ",
-									ConditionExpression: instance.ConditionExpression{
+									ConditionExpression: instance.ExpressionUnMarshal{
 										Type: instance.ExpressionTypeFormal,
 										ExpressionSubstitution: &instance.FormalExpression{
 											Expression: instance.Expression{
@@ -236,7 +236,7 @@ func TestA_2_1_roundtrip(t *testing.T) {
 									},
 									SourceRef: "_To9ZzzOCEeSknpIVFCxNIQ",
 									TargetRef: "_To9Z2TOCEeSknpIVFCxNIQ",
-									ConditionExpression: instance.ConditionExpression{
+									ConditionExpression: instance.ExpressionUnMarshal{
 										Type: instance.ExpressionTypeFormal,
 										ExpressionSubstitution: &instance.FormalExpression{
 											Expression: instance.Expression{
@@ -257,7 +257,7 @@ func TestA_2_1_roundtrip(t *testing.T) {
 									},
 									SourceRef: "_To9Z2TOCEeSknpIVFCxNIQ",
 									TargetRef: "_To9ZsTOCEeSknpIVFCxNIQ",
-									ConditionExpression: instance.ConditionExpression{
+									ConditionExpression: instance.ExpressionUnMarshal{
 										Type: instance.ExpressionTypeFormal,
 										ExpressionSubstitution: &instance.FormalExpression{
 											Expression: instance.Expression{
@@ -278,7 +278,7 @@ func TestA_2_1_roundtrip(t *testing.T) {
 									},
 									SourceRef: "_To9ZyjOCEeSknpIVFCxNIQ",
 									TargetRef: "_To9ZwDOCEeSknpIVFCxNIQ",
-									ConditionExpression: instance.ConditionExpression{
+									ConditionExpression: instance.ExpressionUnMarshal{
 										Type: instance.ExpressionTypeFormal,
 										ExpressionSubstitution: &instance.FormalExpression{
 											Expression: instance.Expression{
@@ -299,7 +299,7 @@ func TestA_2_1_roundtrip(t *testing.T) {
 									},
 									SourceRef: "_To9ZyjOCEeSknpIVFCxNIQ",
 									TargetRef: "_To9ZzzOCEeSknpIVFCxNIQ",
-									ConditionExpression: instance.ConditionExpression{
+									ConditionExpression: instance.ExpressionUnMarshal{
 										Type: instance.ExpressionTypeFormal,
 										ExpressionSubstitution: &instance.FormalExpression{
 											Expression: instance.Expression{

@@ -12,6 +12,7 @@ type FlowElements struct {
 	StartEvents             []StartEvent             `xml:"startEvent"`
 	EndEvents               []EndEvent               `xml:"endEvent"`
 	Tasks                   []Task                   `xml:"task"`
+	ManualTasks             []ManualTask             `xml:"manualTask"`
 	UserTasks               []UserTask               `xml:"userTask"`
 	ServiceTasks            []ServiceTask            `xml:"serviceTask"`
 	SendTasks               []SendTask               `xml:"sendTask"`

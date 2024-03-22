@@ -3,7 +3,7 @@ package instance
 // TimerEventDefinition, choice TimeDate, TimeDuration, TimeCycle
 type TimerEventDefinition struct {
 	EventDefinition
-	TimeDate     Expression `xml:"timeDate"`
-	TimeDuration Expression `xml:"timeDuration"`
-	TimeCycle    Expression `xml:"timeCycle"`
+	TimeDate     ExpressionUnMarshal `xml:"timeDate"`
+	TimeDuration ExpressionUnMarshal `xml:"timeDuration"`
+	TimeCycle    ExpressionUnMarshal `xml:"timeCycle"`
 }

@@ -17,4 +17,6 @@ type RootElemnts struct {
 	GlobalUserTasks []GlobalUserTask `xml:"globalUserTask"`
 	Messages        []Message        `xml:"message"`
 	Resources       []Resource       `xml:"resource"`
+	ItemDefinitions []ItemDefinition `xml:"itemDefinition"`
+	Signals         []Signal         `xml:"signal"`
 }

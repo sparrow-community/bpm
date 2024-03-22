@@ -221,7 +221,7 @@ func TestA_2_1_export(t *testing.T) {
 									},
 									SourceRef: "Activity_171qefk",
 									TargetRef: "Gateway_140ec76",
-									ConditionExpression: instance.ConditionExpression{
+									ConditionExpression: instance.ExpressionUnMarshal{
 										Type: instance.ExpressionTypeFormal,
 										ExpressionSubstitution: &instance.FormalExpression{
 											Expression: instance.Expression{
@@ -248,7 +248,7 @@ func TestA_2_1_export(t *testing.T) {
 									},
 									SourceRef: "Activity_172ndxy",
 									TargetRef: "Event_1wqqwdz",
-									ConditionExpression: instance.ConditionExpression{
+									ConditionExpression: instance.ExpressionUnMarshal{
 										Type: instance.ExpressionTypeFormal,
 										ExpressionSubstitution: &instance.FormalExpression{
 											Expression: instance.Expression{

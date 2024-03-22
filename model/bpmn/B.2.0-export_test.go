@@ -445,7 +445,7 @@ func TestB_2_0_export(t *testing.T) {
 															},
 														},
 													},
-													Condition: instance.ConditionExpression{
+													Condition: instance.ExpressionUnMarshal{
 														Type:                   "tFormalExpression",
 														ExpressionSubstitution: &instance.FormalExpression{},
 													},
@@ -752,7 +752,7 @@ func TestB_2_0_export(t *testing.T) {
 															},
 														},
 													},
-													Condition: instance.ConditionExpression{
+													Condition: instance.ExpressionUnMarshal{
 														Type:                   "tFormalExpression",
 														ExpressionSubstitution: &instance.FormalExpression{},
 													},
@@ -1970,7 +1970,7 @@ func TestB_2_0_export(t *testing.T) {
 																		},
 																	},
 																},
-																Condition: instance.ConditionExpression{
+																Condition: instance.ExpressionUnMarshal{
 																	Type:                   "tFormalExpression",
 																	ExpressionSubstitution: &instance.FormalExpression{},
 																},
@@ -2681,7 +2681,7 @@ func TestB_2_0_export(t *testing.T) {
 															},
 														},
 													},
-													Condition: instance.ConditionExpression{
+													Condition: instance.ExpressionUnMarshal{
 														Type:                   "tFormalExpression",
 														ExpressionSubstitution: &instance.FormalExpression{},
 													},
