@@ -160,14 +160,10 @@ func TestC_4_0_roundtrip(t *testing.T) {
 						IsClosed: false,
 						LaneSets: []instance.LaneSet{
 							{
-								BaseElement: instance.BaseElement{
-									ID: "_ff7ff8f6-a4f1-4e93-84e1-01cdb85eb755",
-								},
-								Name: "HR Department",
 								Lanes: []instance.Lane{
 									{
 										BaseElement: instance.BaseElement{
-											ID: "Lane_0w7h48m",
+											ID: "_ff7ff8f6-a4f1-4e93-84e1-01cdb85eb755",
 										},
 										Name: "HR Department",
 										FlowNodeRefs: []string{
@@ -234,7 +230,7 @@ func TestC_4_0_roundtrip(t *testing.T) {
 													BaseElement: instance.BaseElement{
 														ID: "_f8973a92-3d84-4672-a1a3-b0df154121e1",
 													},
-													Name: "Send &#10;candidate Contract",
+													Name: "Send \ncandidate Contract",
 												},
 												Incoming: []string{"_6d1a9d5a-127d-477a-8dbe-268f125f20d8", "_9ca6c9e6-4aff-4ec8-9fd3-2743c06483c3"},
 												Outgoing: []string{"_4d3df0ce-e5be-443b-a379-8dcd4aae4de9"},
@@ -258,9 +254,6 @@ func TestC_4_0_roundtrip(t *testing.T) {
 											},
 											IoSpecification: instance.IoSpecification{
 												InputOutputSpecification: instance.InputOutputSpecification{
-													BaseElement: instance.BaseElement{
-														ID: "_d0960287-a964-4916-b4fe-b1238d9e3e75",
-													},
 													DataOutputs: []instance.DataOutput{
 														{
 															BaseElement: instance.BaseElement{
@@ -270,7 +263,7 @@ func TestC_4_0_roundtrip(t *testing.T) {
 															Name:           "Employee Details",
 														},
 													},
-													InputSets: []instance.InputSet{},
+													InputSets: []instance.InputSet{{}},
 													OutputSets: []instance.OutputSet{
 														{
 															BaseElement: instance.BaseElement{
@@ -981,7 +974,7 @@ func TestC_4_0_roundtrip(t *testing.T) {
 													BaseElement: instance.BaseElement{
 														ID: "_e9306b3f-3a77-42e1-b53e-2ed8ee45486d",
 													},
-													Name: "New &#10;employee&#10;hired",
+													Name: "New \nemployee\nhired",
 												},
 												Outgoing: []string{"_495f04a4-ed17-4e7b-a952-11c06c2230d1"},
 											},
@@ -1010,7 +1003,7 @@ func TestC_4_0_roundtrip(t *testing.T) {
 											BaseElement: instance.BaseElement{
 												ID: "_2d74cb72-2fcc-4869-b5f0-b867a7f2f7ec",
 											},
-											OptionalOutputRefs: []string{"_e96a6b5c-b24a-4221-8d35-cd3a4e68641e"},
+											DataOutputRefs: []string{"_e96a6b5c-b24a-4221-8d35-cd3a4e68641e"},
 										},
 										EventDefinitions: instance.EventDefinitions{
 											SignalEventDefinitions: []instance.SignalEventDefinition{
@@ -1050,6 +1043,7 @@ func TestC_4_0_roundtrip(t *testing.T) {
 															BaseElement: instance.BaseElement{
 																ID: "_b1d40770-825b-4d23-a026-db95f815d520",
 															},
+															Name:           "Employee Details",
 															ItemSubjectRef: "_triso-default-bpmnItemDefinition-string_id",
 														},
 													},
@@ -1105,6 +1099,72 @@ func TestC_4_0_roundtrip(t *testing.T) {
 									},
 									Implementation: "##unspecified",
 								},
+								{
+									Task: instance.Task{
+										Activity: instance.Activity{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_912f731a-fb6b-499b-a3f4-4c1632d606bd",
+													},
+													Name: "Assign required applications and permissions",
+												},
+												Incoming: []string{"_dcec1142-90eb-41a8-b809-458b713ab94c"},
+												Outgoing: []string{"_be72815e-ed18-4d77-9252-1ab0a7438dc9"},
+											},
+											IoSpecification: instance.IoSpecification{
+												InputOutputSpecification: instance.InputOutputSpecification{
+													DataOutputs: []instance.DataOutput{
+														{
+															BaseElement: instance.BaseElement{
+																ID: "_4b0aa8de-e86c-492a-a5da-fd80464b71bd",
+															},
+															Name: "User Management",
+														},
+													},
+													InputSets: []instance.InputSet{{}},
+													OutputSets: []instance.OutputSet{
+														{
+															BaseElement: instance.BaseElement{
+																ID: "_7809a0c3-5349-4e66-bf42-fa19126dd198",
+															},
+															DataOutputRefs: []string{"_4b0aa8de-e86c-492a-a5da-fd80464b71bd"},
+														},
+													},
+												},
+											},
+											DataOutputAssociations: []instance.DataOutputAssociation{
+												{
+													DataAssociation: instance.DataAssociation{
+														BaseElement: instance.BaseElement{
+															ID: "_17c38035-fb11-4abb-b2b6-1cbd14acdab0",
+														},
+														SourceRef: "_4b0aa8de-e86c-492a-a5da-fd80464b71bd",
+														TargetRef: "_b60be020-1f04-46c2-b1a9-19bfc66ead82",
+													},
+												},
+											},
+										},
+									},
+									Implementation: "##unspecified",
+								},
+								{
+									Task: instance.Task{
+										Activity: instance.Activity{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_ad173aff-cfe3-4098-8c65-02f783ad9e1f",
+													},
+													Name: "Prepare IT part of welcome package",
+												},
+												Incoming: []string{"_ba635734-5672-4f1b-b753-3b08c778c64e"},
+												Outgoing: []string{"_c904a36b-64f6-46e3-8ef1-9f2ecc3faaff"},
+											},
+										},
+									},
+									Implementation: "##unspecified",
+								},
 							},
 							ManualTasks: []instance.ManualTask{
 								{
@@ -1122,6 +1182,722 @@ func TestC_4_0_roundtrip(t *testing.T) {
 											},
 										},
 									},
+								},
+							},
+							ServiceTasks: []instance.ServiceTask{
+								{
+									Task: instance.Task{
+										Activity: instance.Activity{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_9db2d136-aa33-4de2-be76-554e7843363d",
+													},
+													Name: "Configure workstation",
+												},
+												Incoming: []string{"_be72815e-ed18-4d77-9252-1ab0a7438dc9"},
+												Outgoing: []string{"_ba635734-5672-4f1b-b753-3b08c778c64e"},
+											},
+											IoSpecification: instance.IoSpecification{
+												InputOutputSpecification: instance.InputOutputSpecification{
+													DataInputs: []instance.DataInput{
+														{
+															BaseElement: instance.BaseElement{
+																ID: "_4606e5ae-aaa4-4416-9576-68f29181c5b2",
+															},
+															Name: "User Management",
+														},
+													},
+													InputSets: []instance.InputSet{
+														{
+															BaseElement: instance.BaseElement{
+																ID: "_3b4c5d5b-b5bc-4155-8ff6-adb9f629de15",
+															},
+															DataInputRefs: []string{"_4606e5ae-aaa4-4416-9576-68f29181c5b2"},
+														},
+													},
+													OutputSets: []instance.OutputSet{{}},
+												},
+											},
+											DataInputAssociations: []instance.DataInputAssociation{
+												{
+													DataAssociation: instance.DataAssociation{
+														BaseElement: instance.BaseElement{
+															ID: "_de54f4cb-0603-4389-ab3a-9edb9cbfec2a",
+														},
+														SourceRef: "_b60be020-1f04-46c2-b1a9-19bfc66ead82",
+														TargetRef: "_4606e5ae-aaa4-4416-9576-68f29181c5b2",
+													},
+												},
+											},
+										},
+									},
+									Implementation: "##WebService",
+								},
+							},
+							EndEvents: []instance.EndEvent{
+								{
+									ThrowEvent: instance.ThrowEvent{
+										Event: instance.Event{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_c82dd8eb-ce54-4aa7-b8c4-b8d3e8fd654e",
+													},
+													Name: "Workstation and permissions ready",
+												},
+												Incoming: []string{"_c904a36b-64f6-46e3-8ef1-9f2ecc3faaff"},
+											},
+										},
+										EventDefinitions: instance.EventDefinitions{
+											MessageEventDefinitions: []instance.MessageEventDefinition{
+												{
+													EventDefinition: instance.EventDefinition{
+														RootElement: instance.RootElement{
+															BaseElement: instance.BaseElement{
+																ID: "_2f246656-2c54-430d-ad1b-9c50428d1b9d",
+															},
+														},
+													},
+												},
+											},
+										},
+									},
+								},
+							},
+							DataStoreReferences: []instance.DataStoreReference{
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_e355b511-e181-4e7b-a9b1-30cb48dd6cab",
+										},
+										Name: "Employee Details",
+									},
+									DataStoreRef: "_d367181e-c25a-407e-a5fb-817a27698a30",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_b60be020-1f04-46c2-b1a9-19bfc66ead82",
+										},
+										Name: "User Management",
+									},
+									DataStoreRef: "_7c793f30-d450-4a8e-becf-f168b14317ea",
+								},
+							},
+							SequenceFlows: []instance.SequenceFlow{
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_495f04a4-ed17-4e7b-a952-11c06c2230d1",
+										},
+									},
+									SourceRef: "_e9306b3f-3a77-42e1-b53e-2ed8ee45486d",
+									TargetRef: "_7e9d2e5a-21f7-493b-9ae4-03245aa33a5c",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_0bccc7f6-0f56-49bc-98df-59d70433c043",
+										},
+									},
+									SourceRef: "_7e9d2e5a-21f7-493b-9ae4-03245aa33a5c",
+									TargetRef: "_c29af228-0768-4dfe-945a-17755e173674",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_dcec1142-90eb-41a8-b809-458b713ab94c",
+										},
+									},
+									SourceRef: "_c29af228-0768-4dfe-945a-17755e173674",
+									TargetRef: "_912f731a-fb6b-499b-a3f4-4c1632d606bd",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_be72815e-ed18-4d77-9252-1ab0a7438dc9",
+										},
+									},
+									SourceRef: "_912f731a-fb6b-499b-a3f4-4c1632d606bd",
+									TargetRef: "_9db2d136-aa33-4de2-be76-554e7843363d",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_ba635734-5672-4f1b-b753-3b08c778c64e",
+										},
+									},
+									SourceRef: "_9db2d136-aa33-4de2-be76-554e7843363d",
+									TargetRef: "_ad173aff-cfe3-4098-8c65-02f783ad9e1f",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_c904a36b-64f6-46e3-8ef1-9f2ecc3faaff",
+										},
+									},
+									SourceRef: "_ad173aff-cfe3-4098-8c65-02f783ad9e1f",
+									TargetRef: "_c82dd8eb-ce54-4aa7-b8c4-b8d3e8fd654e",
+								},
+							},
+						},
+						Artifacts: instance.Artifacts{
+							TextAnnotations: []instance.TextAnnotation{
+								{
+									Artifact: instance.Artifact{
+										BaseElement: instance.BaseElement{
+											ID: "_246c3cf7-fb4b-4c05-8ece-55c77fb4dc1e",
+										},
+									},
+									Text: "With PowerShell",
+								},
+							},
+							Associations: []instance.Association{
+								{
+									Artifact: instance.Artifact{
+										BaseElement: instance.BaseElement{
+											ID: "_fa0de585-aa40-40bb-a3a5-965d956e884d",
+										},
+									},
+									AssociationDirection: "None",
+									SourceRef:            "_9db2d136-aa33-4de2-be76-554e7843363d",
+									TargetRef:            "_246c3cf7-fb4b-4c05-8ece-55c77fb4dc1e",
+								},
+							},
+						},
+					},
+					{
+						CallableElement: instance.CallableElement{
+							RootElement: instance.RootElement{
+								BaseElement: instance.BaseElement{
+									ID: "_da743a6f-d9e5-4fcf-8a96-d2fd5cfb73d4",
+								},
+							},
+							Name: "Payroll - Process",
+						},
+						IsClosed: false,
+						FlowElements: instance.FlowElements{
+							StartEvents: []instance.StartEvent{
+								{
+									CatchEvent: instance.CatchEvent{
+										Event: instance.Event{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_3d4130c6-48c9-47fe-8e95-2eeb56060e2b",
+													},
+													Name: "New \nemployee\nhired",
+												},
+												Outgoing: []string{"_6b24f6f7-bc44-4d73-ab54-1ac8b638423e"},
+											},
+										},
+										DataOutputs: []instance.DataOutput{
+											{
+												BaseElement: instance.BaseElement{
+													ID: "_06fff5da-cd41-4538-a6b8-cd73c6368aa3",
+												},
+												Name:           "Employee Details",
+												ItemSubjectRef: "_triso-default-bpmnItemDefinition-string_id",
+											},
+										},
+										DataOutputAssociations: []instance.DataOutputAssociation{
+											{
+												DataAssociation: instance.DataAssociation{
+													BaseElement: instance.BaseElement{
+														ID: "_fba68566-2c5e-49e2-8f1e-2feff2873742",
+													},
+													SourceRef: "_06fff5da-cd41-4538-a6b8-cd73c6368aa3",
+													TargetRef: "_16498c9e-c33f-4f92-9033-714b89582a7c",
+												},
+											},
+										},
+										OutputSet: instance.OutputSet{
+											BaseElement: instance.BaseElement{
+												ID: "_0b28282c-3c90-4b70-920c-a6898a3fc18a",
+											},
+											DataOutputRefs: []string{"_06fff5da-cd41-4538-a6b8-cd73c6368aa3"},
+										},
+										EventDefinitions: instance.EventDefinitions{
+											SignalEventDefinitions: []instance.SignalEventDefinition{
+												{
+													EventDefinition: instance.EventDefinition{
+														RootElement: instance.RootElement{
+															BaseElement: instance.BaseElement{
+																ID: "_1f790746-cb6c-4eaa-85a8-a0a6c0fa7602",
+															},
+														},
+													},
+													SignalRef: "_bf41cec3-da5e-4fc7-87f9-7520a720192b",
+												},
+											},
+										},
+									},
+								},
+							},
+							UserTasks: []instance.UserTask{
+								{
+									Task: instance.Task{
+										Activity: instance.Activity{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_ae47ce79-bd91-452b-be68-47a2ea589e75",
+													},
+													Name: "Validate provided information",
+												},
+												Incoming: []string{"_6b24f6f7-bc44-4d73-ab54-1ac8b638423e"},
+												Outgoing: []string{"_d110be18-ff17-4375-818b-6463eff4e2d6"},
+											},
+											IoSpecification: instance.IoSpecification{
+												InputOutputSpecification: instance.InputOutputSpecification{
+													DataInputs: []instance.DataInput{
+														{
+															BaseElement: instance.BaseElement{
+																ID: "_b3935a94-0b1b-4cd7-8a3b-a10f5b8b5e34",
+															},
+															ItemSubjectRef: "_triso-default-bpmnItemDefinition-string_id",
+															Name:           "Employee Details",
+														},
+													},
+													InputSets: []instance.InputSet{
+														{
+															BaseElement: instance.BaseElement{
+																ID: "_4dbfa005-dede-45b3-adfd-f81e5900e5a6",
+															},
+															DataInputRefs: []string{"_b3935a94-0b1b-4cd7-8a3b-a10f5b8b5e34"},
+														},
+													},
+													OutputSets: []instance.OutputSet{{}},
+												},
+											},
+											DataInputAssociations: []instance.DataInputAssociation{
+												{
+													DataAssociation: instance.DataAssociation{
+														BaseElement: instance.BaseElement{
+															ID: "_3ba0a27a-2a49-458b-8680-be1330f46f3a",
+														},
+														SourceRef: "_16498c9e-c33f-4f92-9033-714b89582a7c",
+														TargetRef: "_b3935a94-0b1b-4cd7-8a3b-a10f5b8b5e34",
+													},
+												},
+											},
+										},
+									},
+									Implementation: "##unspecified",
+								},
+								{
+									Task: instance.Task{
+										Activity: instance.Activity{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_9dbd92a5-5c0a-4039-b741-bf4ede54ccf0",
+													},
+													Name: "Update payroll system",
+												},
+												Incoming: []string{"_12e2f256-ec10-4a8d-934c-329143c588d8", "_7b347349-7441-4e5c-ab24-2e614051f222"},
+												Outgoing: []string{"_46c8bd85-1b7f-45fb-81c6-23d22300c0cd"},
+											},
+											IoSpecification: instance.IoSpecification{
+												InputOutputSpecification: instance.InputOutputSpecification{
+													DataOutputs: []instance.DataOutput{
+														{
+															BaseElement: instance.BaseElement{
+																ID: "_de11bfcc-129c-4570-b4f0-2b395f932f16",
+															},
+															Name: "Payroll system",
+														},
+													},
+													InputSets: []instance.InputSet{{}},
+													OutputSets: []instance.OutputSet{
+														{
+															BaseElement: instance.BaseElement{
+																ID: "_468ab3e6-4b63-4f54-9d07-16c8f1320ef1",
+															},
+															DataOutputRefs: []string{"_de11bfcc-129c-4570-b4f0-2b395f932f16"},
+														},
+													},
+												},
+											},
+											DataOutputAssociations: []instance.DataOutputAssociation{
+												{
+													DataAssociation: instance.DataAssociation{
+														BaseElement: instance.BaseElement{
+															ID: "_079db308-7d1e-497d-962e-23499236c981",
+														},
+														SourceRef: "_de11bfcc-129c-4570-b4f0-2b395f932f16",
+														TargetRef: "_a9cffac5-6e03-41de-83bf-d34304f28b1a",
+													},
+												},
+											},
+										},
+									},
+									Implementation: "##unspecified",
+								},
+							},
+							ExclusiveGatewaies: []instance.ExclusiveGateway{
+								{
+									Gateway: instance.Gateway{
+										FlowNode: instance.FlowNode{
+											FlowElement: instance.FlowElement{
+												BaseElement: instance.BaseElement{
+													ID: "_fa14ca2d-ea97-49a2-b75e-72e7d27d6fd1",
+												},
+												Name: "All necessary data available?",
+											},
+											Incoming: []string{"_d110be18-ff17-4375-818b-6463eff4e2d6"},
+											Outgoing: []string{"_ca6f904d-e30d-4777-a7dd-661650e1e3a2", "_12e2f256-ec10-4a8d-934c-329143c588d8"},
+										},
+										GatewayDirection: "Diverging",
+									},
+								},
+							},
+							ManualTasks: []instance.ManualTask{
+								{
+									Task: instance.Task{
+										Activity: instance.Activity{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_788443d9-65f0-43a4-96a8-63e8d6f380a7",
+													},
+													Name: "Clarify missing points",
+												},
+												Incoming: []string{"_ca6f904d-e30d-4777-a7dd-661650e1e3a2"},
+												Outgoing: []string{"_7b347349-7441-4e5c-ab24-2e614051f222"},
+											},
+											LoopCharacteristicsElements: instance.LoopCharacteristicsElements{
+												StandardLoopCharacteristics: []instance.StandardLoopCharacteristics{
+													{
+														LoopCharacteristics: instance.LoopCharacteristics{
+															BaseElement: instance.BaseElement{
+																ID: "_be244352-1e67-4664-9a10-5d088542f02e",
+															},
+														},
+													},
+												},
+											},
+										},
+									},
+								},
+							},
+							EndEvents: []instance.EndEvent{
+								{
+									ThrowEvent: instance.ThrowEvent{
+										Event: instance.Event{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_efbd0983-76cd-4a4c-acf3-6dde71d7c760",
+													},
+													Name: "Payroll ready",
+												},
+												Incoming: []string{"_46c8bd85-1b7f-45fb-81c6-23d22300c0cd"},
+											},
+										},
+										EventDefinitions: instance.EventDefinitions{
+											MessageEventDefinitions: []instance.MessageEventDefinition{
+												{
+													EventDefinition: instance.EventDefinition{
+														RootElement: instance.RootElement{
+															BaseElement: instance.BaseElement{
+																ID: "_0be7d261-5be3-40e4-a6fd-954d9c836607",
+															},
+														},
+													},
+												},
+											},
+										},
+									},
+								},
+							},
+							DataStoreReferences: []instance.DataStoreReference{
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_16498c9e-c33f-4f92-9033-714b89582a7c",
+										},
+										Name: "Employee Details",
+									},
+									DataStoreRef: "_d367181e-c25a-407e-a5fb-817a27698a30",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_a9cffac5-6e03-41de-83bf-d34304f28b1a",
+										},
+										Name: "Payroll system",
+									},
+									DataStoreRef: "_2addcc9a-638e-4496-b84f-5b0e28fe6536",
+								},
+							},
+							SequenceFlows: []instance.SequenceFlow{
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_6b24f6f7-bc44-4d73-ab54-1ac8b638423e",
+										},
+									},
+									SourceRef: "_3d4130c6-48c9-47fe-8e95-2eeb56060e2b",
+									TargetRef: "_ae47ce79-bd91-452b-be68-47a2ea589e75",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_d110be18-ff17-4375-818b-6463eff4e2d6",
+										},
+									},
+									SourceRef: "_ae47ce79-bd91-452b-be68-47a2ea589e75",
+									TargetRef: "_fa14ca2d-ea97-49a2-b75e-72e7d27d6fd1",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_ca6f904d-e30d-4777-a7dd-661650e1e3a2",
+										},
+										Name: "No",
+									},
+									SourceRef: "_fa14ca2d-ea97-49a2-b75e-72e7d27d6fd1",
+									TargetRef: "_788443d9-65f0-43a4-96a8-63e8d6f380a7",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_12e2f256-ec10-4a8d-934c-329143c588d8",
+										},
+										Name: "Yes",
+									},
+									SourceRef: "_fa14ca2d-ea97-49a2-b75e-72e7d27d6fd1",
+									TargetRef: "_9dbd92a5-5c0a-4039-b741-bf4ede54ccf0",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_7b347349-7441-4e5c-ab24-2e614051f222",
+										},
+									},
+									SourceRef: "_788443d9-65f0-43a4-96a8-63e8d6f380a7",
+									TargetRef: "_9dbd92a5-5c0a-4039-b741-bf4ede54ccf0",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_46c8bd85-1b7f-45fb-81c6-23d22300c0cd",
+										},
+									},
+									SourceRef: "_9dbd92a5-5c0a-4039-b741-bf4ede54ccf0",
+									TargetRef: "_efbd0983-76cd-4a4c-acf3-6dde71d7c760",
+								},
+							},
+						},
+					},
+					{
+						CallableElement: instance.CallableElement{
+							RootElement: instance.RootElement{
+								BaseElement: instance.BaseElement{
+									ID: "_3486bf55-0a7f-4ff1-be15-1555669f58ad",
+								},
+							},
+							Name: "Facilities - Process",
+						},
+						IsClosed: false,
+						FlowElements: instance.FlowElements{
+							StartEvents: []instance.StartEvent{
+								{
+									CatchEvent: instance.CatchEvent{
+										Event: instance.Event{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_94a62738-dc7a-49f6-81d8-f5642f7ae850",
+													},
+													Name: "New \nemployee \nhired",
+												},
+												Outgoing: []string{"_ea0e1abf-e9f6-406a-96fb-12fcdf765634"},
+											},
+										},
+										DataOutputs: []instance.DataOutput{
+											{
+												BaseElement: instance.BaseElement{
+													ID: "_811f33cd-dd3b-4ecd-aa83-342ee7ccb86c",
+												},
+												ItemSubjectRef: "_triso-default-bpmnItemDefinition-string_id",
+												Name:           "Employee Details",
+											},
+										},
+										DataOutputAssociations: []instance.DataOutputAssociation{
+											{
+												DataAssociation: instance.DataAssociation{
+													BaseElement: instance.BaseElement{
+														ID: "_2ae32762-1124-45f5-a01b-7292f9721c7d",
+													},
+													SourceRef: "_811f33cd-dd3b-4ecd-aa83-342ee7ccb86c",
+													TargetRef: "_9931ba94-ede8-4f53-8081-878c549ba1c8",
+												},
+											},
+										},
+										OutputSet: instance.OutputSet{
+											BaseElement: instance.BaseElement{
+												ID: "_e0d2138c-bd9b-400c-9501-7fdfc1b41f5f",
+											},
+											DataOutputRefs: []string{"_811f33cd-dd3b-4ecd-aa83-342ee7ccb86c"},
+										},
+										EventDefinitions: instance.EventDefinitions{
+											SignalEventDefinitions: []instance.SignalEventDefinition{
+												{
+													EventDefinition: instance.EventDefinition{
+														RootElement: instance.RootElement{
+															BaseElement: instance.BaseElement{
+																ID: "_3acc62e3-0cfd-400d-8691-3f05b1589d95",
+															},
+														},
+													},
+													SignalRef: "_bf41cec3-da5e-4fc7-87f9-7520a720192b",
+												},
+											},
+										},
+									},
+								},
+							},
+							ManualTasks: []instance.ManualTask{
+								{
+									Task: instance.Task{
+										Activity: instance.Activity{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_2bf94039-15a1-44bb-9d14-81358777466c",
+													},
+													Name: "Prepare\naccess \ncard",
+												},
+												Incoming: []string{"_ea0e1abf-e9f6-406a-96fb-12fcdf765634"},
+												Outgoing: []string{"_4436759d-6848-4400-93e5-3971c69b2f67"},
+											},
+										},
+									},
+								},
+							},
+							UserTasks: []instance.UserTask{
+								{
+									Task: instance.Task{
+										Activity: instance.Activity{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_737503c8-10bc-483f-8871-5461d822b469",
+													},
+													Name: "Configure access details",
+												},
+												Incoming: []string{"_4436759d-6848-4400-93e5-3971c69b2f67"},
+												Outgoing: []string{"_f405a593-5f87-4f62-862e-bcf9f776bc95"},
+											},
+											IoSpecification: instance.IoSpecification{
+												InputOutputSpecification: instance.InputOutputSpecification{
+													DataInputs: []instance.DataInput{
+														{
+															BaseElement: instance.BaseElement{
+																ID: "_946f3a81-8249-481e-afc4-07647f204192",
+															},
+															ItemSubjectRef: "_triso-default-bpmnItemDefinition-string_id",
+															Name:           "Employee Details",
+														},
+													},
+													InputSets: []instance.InputSet{
+														{
+															BaseElement: instance.BaseElement{
+																ID: "_9e2a6ff5-7f57-4b9a-873c-e3905310f0c7",
+															},
+															DataInputRefs: []string{"_946f3a81-8249-481e-afc4-07647f204192"},
+														},
+													},
+													OutputSets: []instance.OutputSet{{}},
+												},
+											},
+											DataInputAssociations: []instance.DataInputAssociation{
+												{
+													DataAssociation: instance.DataAssociation{
+														BaseElement: instance.BaseElement{
+															ID: "_ad35d446-d8b5-46d9-b2b0-61178b689754",
+														},
+														SourceRef: "_9931ba94-ede8-4f53-8081-878c549ba1c8",
+														TargetRef: "_946f3a81-8249-481e-afc4-07647f204192",
+													},
+												},
+											},
+										},
+									},
+									Implementation: "##unspecified",
+								},
+							},
+							EndEvents: []instance.EndEvent{
+								{
+									ThrowEvent: instance.ThrowEvent{
+										Event: instance.Event{
+											FlowNode: instance.FlowNode{
+												FlowElement: instance.FlowElement{
+													BaseElement: instance.BaseElement{
+														ID: "_5ee09fe4-f38f-454d-b6e4-1c3703a6a239",
+													},
+													Name: "Access \ncard \nready",
+												},
+												Incoming: []string{"_f405a593-5f87-4f62-862e-bcf9f776bc95"},
+											},
+										},
+										EventDefinitions: instance.EventDefinitions{
+											MessageEventDefinitions: []instance.MessageEventDefinition{
+												{
+													EventDefinition: instance.EventDefinition{
+														RootElement: instance.RootElement{
+															BaseElement: instance.BaseElement{
+																ID: "_a4a343f5-62b7-4939-95c4-93b2520d5fa6",
+															},
+														},
+													},
+												},
+											},
+										},
+									},
+								},
+							},
+							DataStoreReferences: []instance.DataStoreReference{
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_9931ba94-ede8-4f53-8081-878c549ba1c8",
+										},
+										Name: "Employee Details",
+									},
+									DataStoreRef: "_d367181e-c25a-407e-a5fb-817a27698a30",
+								},
+							},
+							SequenceFlows: []instance.SequenceFlow{
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_ea0e1abf-e9f6-406a-96fb-12fcdf765634",
+										},
+									},
+									SourceRef: "_94a62738-dc7a-49f6-81d8-f5642f7ae850",
+									TargetRef: "_2bf94039-15a1-44bb-9d14-81358777466c",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_4436759d-6848-4400-93e5-3971c69b2f67",
+										},
+									},
+									SourceRef: "_2bf94039-15a1-44bb-9d14-81358777466c",
+									TargetRef: "_737503c8-10bc-483f-8871-5461d822b469",
+								},
+								{
+									FlowElement: instance.FlowElement{
+										BaseElement: instance.BaseElement{
+											ID: "_f405a593-5f87-4f62-862e-bcf9f776bc95",
+										},
+									},
+									SourceRef: "_737503c8-10bc-483f-8871-5461d822b469",
+									TargetRef: "_5ee09fe4-f38f-454d-b6e4-1c3703a6a239",
 								},
 							},
 						},

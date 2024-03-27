@@ -17,6 +17,7 @@ type FlowElements struct {
 	ServiceTasks            []ServiceTask            `xml:"serviceTask"`
 	SendTasks               []SendTask               `xml:"sendTask"`
 	ReceiveTasks            []ReceiveTask            `xml:"receiveTask"`
+	BusinessRuleTasks       []BusinessRuleTask       `xml:"businessRuleTask"`
 	SequenceFlows           []SequenceFlow           `xml:"sequenceFlow"`
 	DataStoreReferences     []DataStoreReference     `xml:"dataStoreReference"`
 	ParallelGatewaies       []ParallelGateway        `xml:"parallelGateway"`
