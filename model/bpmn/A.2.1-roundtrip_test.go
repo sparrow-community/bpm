@@ -41,7 +41,27 @@ func TestA_2_1_roundtrip(t *testing.T) {
 									ExtensionElements: instance.ExtensionElements{
 										Any: []xml.Token{nil},
 									},
-									Any: []xml.Token{nil},
+								},
+							},
+							IoSpecification: instance.IoSpecification{
+								InputOutputSpecification: instance.InputOutputSpecification{
+									BaseElement: instance.BaseElement{
+										ID: "_cVGqYDOCEeSknpIVFCxNIQ",
+									},
+									InputSets: []instance.InputSet{
+										{
+											BaseElement: instance.BaseElement{
+												ID: "_cVHRcDOCEeSknpIVFCxNIQ",
+											},
+										},
+									},
+									OutputSets: []instance.OutputSet{
+										{
+											BaseElement: instance.BaseElement{
+												ID: "_cVH4gDOCEeSknpIVFCxNIQ",
+											},
+										},
+									},
 								},
 							},
 							Name: "A.2.1",
@@ -209,10 +229,11 @@ func TestA_2_1_roundtrip(t *testing.T) {
 										ExpressionSubstitution: &instance.FormalExpression{
 											Expression: instance.Expression{
 												BaseElementWithMixedContent: instance.BaseElementWithMixedContent{
-													ID: "_cVKUxjOCEeSknpIVFCxNIQ",
+													ID: "_cVKUwTOCEeSknpIVFCxNIQ",
 												},
 											},
 											Language: "http://www.w3.org/1999/XPath",
+											Value:    "true",
 										},
 									},
 								},
@@ -241,7 +262,7 @@ func TestA_2_1_roundtrip(t *testing.T) {
 										ExpressionSubstitution: &instance.FormalExpression{
 											Expression: instance.Expression{
 												BaseElementWithMixedContent: instance.BaseElementWithMixedContent{
-													ID: "_cVKUxjOCEeSknpIVFCxNIQ",
+													ID: "_cVKUwzOCEeSknpIVFCxNIQ",
 												},
 											},
 											Language: "http://www.w3.org/1999/XPath",
@@ -262,7 +283,7 @@ func TestA_2_1_roundtrip(t *testing.T) {
 										ExpressionSubstitution: &instance.FormalExpression{
 											Expression: instance.Expression{
 												BaseElementWithMixedContent: instance.BaseElementWithMixedContent{
-													ID: "_cVKUxjOCEeSknpIVFCxNIQ",
+													ID: "_cVKUxDOCEeSknpIVFCxNIQ",
 												},
 											},
 											Language: "http://www.w3.org/1999/XPath",
@@ -283,7 +304,7 @@ func TestA_2_1_roundtrip(t *testing.T) {
 										ExpressionSubstitution: &instance.FormalExpression{
 											Expression: instance.Expression{
 												BaseElementWithMixedContent: instance.BaseElementWithMixedContent{
-													ID: "_cVKUxjOCEeSknpIVFCxNIQ",
+													ID: "_cVKUxTOCEeSknpIVFCxNIQ",
 												},
 											},
 											Language: "http://www.w3.org/1999/XPath",

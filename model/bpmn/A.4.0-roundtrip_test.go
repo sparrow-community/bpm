@@ -66,6 +66,22 @@ func TestA_4_0_roundtrip(t *testing.T) {
 						},
 					},
 				},
+				Messages: []instance.Message{
+					{
+						RootElement: instance.RootElement{
+							BaseElement: instance.BaseElement{
+								ID: "Message_1373649949207",
+							},
+						},
+					},
+					{
+						RootElement: instance.RootElement{
+							BaseElement: instance.BaseElement{
+								ID: "Message_1373649949208",
+							},
+						},
+					},
+				},
 				Processes: []instance.Process{
 					{
 						CallableElement: instance.CallableElement{

@@ -2,7 +2,7 @@ package instance
 
 type DataObject struct {
 	FlowElement
-	DataState    DataState `xml:"dataState"`
-	ItemSubject  string    `xml:"itemSubject"`
-	IsCollection bool      `xml:"isCollection"`
+	DataState      DataState `xml:"dataState"`
+	ItemSubjectRef string    `xml:"itemSubjectRef"`
+	IsCollection   bool      `xml:"isCollection"`
 }
